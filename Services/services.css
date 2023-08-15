@@ -1,0 +1,289 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap');
+
+:root{
+  --light-white:rgba(255,255,255,.5);
+   --light-black:rgba(0,0,0,.3);
+   --light-bg:rgba(255,255,255,.1);
+   --white:#fff;
+   --black:#000;
+}
+
+*{
+   margin: 0; padding: 0;
+   outline: none; border: none;
+   text-decoration: none;
+   text-transform: capitalize;
+}
+
+html{
+   font-size: 62.5%;
+   overflow-x: hidden;
+   scroll-behavior: smooth;
+   scroll-padding-top: 5rem;
+}
+body{
+  background-image: url(ser-bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Navigation bar styles */
+.navbar {
+  background-color: rgb(255, 255, 255);
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(54, 53, 53, 0.877);
+  color: #fff;
+}
+
+.navbar .logo img {
+  width: 120px;
+  height: auto;
+  margin-left: 40px;
+}
+
+.navbar .navbar-links ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.navbar .navbar-links ul li {
+  margin-right: 10px;
+  font-size: 18px;
+}
+
+.navbar .navbar-links ul li a {
+  text-decoration: none;
+  color: #fefefe;
+  padding: 7px 10px;
+  
+}
+
+.navbar .navbar-links ul li a:hover {
+  background-color: #939393;
+  color: #050505;
+}
+.toggle-btn{
+  position: absolute;
+  top: .75rem;
+  right: 1rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+}
+.toggle-btn .bar{
+  height: 3px;
+  width: 100%;
+  background-color: white;
+  border-radius: 100px;
+}
+
+.container{
+  padding-top: 10rem;
+}
+
+.heading{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 7rem;
+  color: var(--white);
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 4rem;
+}
+.service{
+  background: url('../img/destimg/about-bg.jpg') no-repeat rgba(0,0,0,.5);
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  background-blend-mode: multiply;
+}
+
+.service .grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 40rem);
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+
+.service .grid .box{
+  background-color: var(--light-bg);
+  padding: 2rem;
+  text-align: center;
+  backdrop-filter: blur(.4rem);
+  border-radius: .5rem;
+}
+
+.service .grid .box img{
+  height: 20rem;
+  transition: .2s linear;
+}
+
+.service .grid .box h3{
+  padding: 2rem 0;
+  font-size: 2rem;
+  color: var(--white);
+}
+
+.service .grid .box p{
+  line-height: 2;
+  font-size: 1.5rem;
+  color: var(--light-white);
+}
+
+.service .grid .box:hover{
+  background-color: var(--light-black);
+}
+
+.service .grid .box:hover img{
+  transform: scale(1.1);
+}
+
+
+
+
+
+/* Styles for the footer */
+
+footer {
+  background-color: #000000;
+  padding: 15px 15px;
+  border-radius: 5px;
+  margin-top: 5px;
+  margin:1px;
+  font-size: 20px;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  /* border-bottom: 1px dotted #ffffff; */
+  
+}
+
+.footer-section {
+  width: 200px;
+  margin-bottom: 30px;
+  
+  
+}
+h2{
+  color: #fff;
+  font-size: 16px;
+}
+
+.footer-section h3 {
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  border-bottom: 1px dotted #ffffff;
+}
+.footer-section h3 a{
+  color: white;
+  text-decoration: none;
+}
+
+.footer-section ul {
+  list-style-type: none;
+  
+}
+
+.footer-section ul li {
+  margin-bottom: 5px;
+  color: #ffffff;
+  font-size: 16px;
+  
+}
+.footer-section ul li a{
+  color: white;
+  text-decoration: none;
+}
+
+.social-media-links li {
+  display: inline-block;
+  margin-right: 10px;
+  border-bottom: 1px dotted #ffffff;
+  z-index: 1px;
+}
+.social-media-links li {
+  fill: rgb(207, 114, 114);
+}
+
+.social-media-links a {
+  color: #de7e7e;
+  font-size: 20px;
+}
+
+
+
+/* Media Queries for Responsive Design */
+@media (max-width: 600px) {
+  .toggle-btn{
+    display: flex;
+    
+  }
+  .logo {
+      max-width: 50px;
+  }
+
+  nav ul li {
+      margin-bottom: 10px;
+  }
+  .navbar{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .navbar .logo img {
+    width: 80px;
+  }
+
+  .navbar .navbar-links {
+    /* flex-basis: 100%;
+    margin-top: 10px; */
+    display: none;
+    width: 100%;
+  }
+
+  .navbar .navbar-links ul {
+    /* justify-content: center; */
+    flex-direction: column;
+    width: 100%;
+  }
+  .navbar .navbar-links li{
+    text-align: center;
+  }
+
+  .navbar .navbar-links li a {
+    margin-right: 8px;
+    padding: .5rem 1rem;
+  }
+  .navbar-links.active{
+    display: flex;
+  }
+  .grid{
+    /* margin: auto;
+    width: 100px;
+    height: auto; */
+    width: 100%;
+    display: flex;
+  }
+  .h1{
+    font-size: 10px;
+  }
+  .footer-section {
+      /* width: 100%; */
+      width: fit-content;
+    }
+}
